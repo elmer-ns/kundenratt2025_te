@@ -3,6 +3,15 @@
     padding: 0px;
 }
 
+a {
+    color: unset;
+
+    text-decoration: none;
+}
+a:visited {
+}
+
+
 .wrapperLandingpage {
     display: grid;
 
@@ -17,12 +26,56 @@
     margin: 5px;
     gap: 5px;
 }
+.wrapper {
+    display: grid;
 
+
+    margin: 5px;
+    gap: 5px;
+}
+
+#LandingPage {
+    grid-template-areas: 
+    'hd hd'
+    'lk mn'
+    'pc pc'
+    'ft ft';
+
+    grid-template-columns: 1fr 2fr;
+}
+#Menu {
+    grid-template-areas: 
+    'hd hd';
+}
+
+/* Denna biten är lite goofy, men det är så att loggan i mitten alltid är precis i mitten, vilket
+jag inte lyckades fixa med flexbox*/
 #title {
-    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr auto 1fr;
+
+    gap: 12px;
+}
+#title > * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#title > h1 {
+    text-align: end;
+}
+#title > p {
+    text-align: start;
+}
+.logo {
+    aspect-ratio: 1;
 }
 
 #nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: blue;
 }
 #pages {
@@ -30,6 +83,18 @@
 }
 #pages > li {
     float: left;
+    display: block;
+}
+#pages > li > a {
+    padding: 2vh;
+}
+
+#pages > li > a:hover {
+    filter: brightness(90%);
+}
+
+#pages, li, a {
+    background-color: inherit;
 }
 
 
@@ -78,7 +143,38 @@ h3 {
 }
 
 
+/*About us*/
+#AboutUs {
+    grid-template-areas: 
+    'hd hd hd'
+    'pl pl hs'
+    'cn in in'
+    'ft ft ft';
 
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#people {
+    grid-area: pl;
+
+    background-color: purple;
+}
+#history {
+    grid-area: hs;
+
+    background-color: green;
+}
+#info {
+    grid-area: in;
+
+    background-color: blue;     
+}
+#contact {
+    grid-area: cn;
+
+    background-color: cornsilk;
+} 
 
 
 
