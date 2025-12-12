@@ -164,7 +164,8 @@ footer {
     grid-template-areas: 
     'hd hd'
     'qk in'
-    'mn mn';
+    'mn mn'
+    'ft ft';
 
     grid-template-columns: 1fr 3fr;
 }
@@ -190,9 +191,73 @@ footer {
 
 }
 #menu > section > div {
-    background-color: red;
+    background-color: var(--main-color);
 
-    height: 50vh;
+    aspect-ratio: 1.15;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menu > section > div:hover {
+    filter: brightness(105%);
+}
+
+#menu > section > div > img {
+    max-height: 75%;
+    animation: C 0.25s;
+}
+#menu > section > div:hover > img {
+    max-height: 65%;
+    animation: A 0.25s;
+}
+
+@keyframes A {
+    from {max-height: 75%;}
+    to {max-height: 65%;}
+}
+@keyframes C {
+    from {max-height: 65%;}
+    to {max-height: 75%;}
+}
+
+@keyframes B {
+    from {height: 0%;}
+    to {height: 100%;}
+}
+@keyframes D {
+    from {height: 100%} 
+    to {height: 0%}
+}
+
+.productDescription {
+    overflow: hidden;
+
+    height: 0%;
+
+    animation: D 0.25s;
+
+    font-size: 0.8rem;
+}
+#menu > section > div:hover > div > .productDescription {
+    animation: B 0.25s;
+
+    height: 100%;
+}
+
+.productInfo {
+    display: grid;
+
+    grid-template-columns: 1fr 75% 1fr;
+
+    width: 90%;
+    margin-bottom: 2%;
+}
+.price {
+    font-weight: bold;
+    text-align: end;
 }
 
 
