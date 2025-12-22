@@ -232,6 +232,10 @@ footer {
     to {height: 0%}
 }
 
+#bakverk, #lunch, #drycker {
+    padding-top: 10px;
+}
+
 .productDescription {
     overflow: hidden;
 
