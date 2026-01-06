@@ -1,3 +1,5 @@
+/* Setup-grejer och annat */
+
 :root {
     --main-color: #b58b63;
     --other-color: #f6efe8;
@@ -9,12 +11,15 @@
     padding: 0px;
 }
 
+div {
+    background-color: var(--main-color);
+}
+
 html {
     font-size: 2vh;
 }
 
 body {
-    /*background: radial-gradient(circle at center, var(--green), var(--other-color));*/
     background-color: var(--green);
     color: rgb(50, 50, 50);
 
@@ -192,9 +197,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-#menu > section > div {
-    background-color: var(--main-color);
 
+.menu_item {
     aspect-ratio: 1.15;
 
     display: flex;
@@ -203,43 +207,41 @@ footer {
     justify-content: space-around;
 }
 
-#menu > section > div:hover {
+.menu_item:hover {
     filter: brightness(105%);
 }
 
-#menu > section > div > img {
-    padding: 10px;
+.menu_item > img {
+    animation: BiggerAgain 0.25s;
 
-    animation: C 0.25s;
-
-    scale: 0.6;
+    scale: 0.65;
 
     height: 100%;
 }
-#menu > section > div:hover > img {
-    animation: A 0.25s;
+.menu_item:hover > img {
+    animation: Smaller 0.25s;
 
-    height: 65%;
+    height: 67%;
 }
 
-@keyframes A {
+@keyframes Smaller {
     from {
         height: 100%;
     }
     to {
-        height: 65%;
+        height: 70%;
     }
 }
-@keyframes C {
+@keyframes BiggerAgain {
     from {
-        height: 65%;
+        height: 70%;
     }
     to {
         height: 100%;
     }
 }
 
-@keyframes B {
+@keyframes Appear {
     from {
         height: 0%;
     }
@@ -247,7 +249,7 @@ footer {
         height: 100%;
     }
 }
-@keyframes D {
+@keyframes GoAway {
     from {
         height: 100%;
     }
@@ -267,12 +269,12 @@ footer {
 
     height: 0%;
 
-    animation: D 0.25s;
+    animation: GoAway 0.25s;
 
     font-size: 0.8rem;
 }
-#menu > section > div:hover > div > .productDescription {
-    animation: B 0.25s;
+.menu_item:hover > div > .productDescription {
+    animation: Appear 0.25s;
 
     height: 100%;
 }
@@ -284,7 +286,32 @@ footer {
 
     width: 90%;
     margin-bottom: 2%;
+
+    max-height: 0px;
+    animation: GoAwayAuto 0.25s;
 }
+.menu_item:hover > .productInfo {
+    max-height: 100vh;
+    animation: AppearAuto 0.25s;
+}
+
+@keyframes AppearAuto {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 100vh;
+    }
+}
+@keyframes GoAwayAuto {
+    from {
+        max-height: 100vh;
+    }
+    to {
+        max-height: 0px;
+    }
+}
+
 .price {
     font-weight: bold;
     text-align: end;
@@ -312,7 +339,6 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #people > div {
-    background-color: var(--main-color);
     filter: brightness(90%);
     border-radius: 5px;
 
