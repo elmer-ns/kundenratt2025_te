@@ -23,7 +23,8 @@ body {
     padding-bottom: 1vh;
 }
 
-header, footer {
+header,
+footer {
     color: rgb(50, 50, 50);
     text-shadow: 1px 1px 2px var(--green);
 }
@@ -119,11 +120,13 @@ header {
     filter: brightness(90%);
 }
 
-#pages, li, a {
+#pages,
+li,
+a {
     background-color: inherit;
 }
 
-    /* Denna biten är lite goofy, men det är så att loggan i mitten alltid är precis i mitten, vilket
+/* Denna biten är lite goofy, men det är så att loggan i mitten alltid är precis i mitten, vilket
     jag inte lyckades fixa med flexbox*/
 #title {
     display: grid;
@@ -150,22 +153,22 @@ footer {
 
 /* Landing Page */
 #LandingPage {
-    grid-template-areas: 
-    'hd hd'
-    'lk mn'
-    'pc pc'
-    'ft ft';
+    grid-template-areas:
+        "hd hd"
+        "lk mn"
+        "pc pc"
+        "ft ft";
 
     grid-template-columns: 1fr 2fr;
 }
 
 /* Menu */
 #Menu {
-    grid-template-areas: 
-    'hd hd'
-    'qk in'
-    'mn mn'
-    'ft ft';
+    grid-template-areas:
+        "hd hd"
+        "qk in"
+        "mn mn"
+        "ft ft";
 
     grid-template-columns: 1fr 3fr;
 }
@@ -188,7 +191,6 @@ footer {
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
 }
 #menu > section > div {
     background-color: var(--main-color);
@@ -215,24 +217,42 @@ footer {
 }
 
 @keyframes A {
-    from {max-height: 75%;}
-    to {max-height: 65%;}
+    from {
+        max-height: 75%;
+    }
+    to {
+        max-height: 65%;
+    }
 }
 @keyframes C {
-    from {max-height: 65%;}
-    to {max-height: 75%;}
+    from {
+        max-height: 65%;
+    }
+    to {
+        max-height: 75%;
+    }
 }
 
 @keyframes B {
-    from {height: 0%;}
-    to {height: 100%;}
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
 }
 @keyframes D {
-    from {height: 100%} 
-    to {height: 0%}
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+    }
 }
 
-#bakverk, #lunch, #drycker {
+#bakverk,
+#lunch,
+#drycker {
     padding-top: 10px;
 }
 
@@ -264,17 +284,15 @@ footer {
     text-align: end;
 }
 
-
 /*About us*/
 #AboutUs {
-    grid-template-areas: 
-    'hd hd hd'
-    'pl pl hs'
-    'cn in in'
-    'ft ft ft';
+    grid-template-areas:
+        "hd hd hd"
+        "pl pl hs"
+        "cn in in"
+        "ft ft ft";
 
     grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 #people {
@@ -312,7 +330,6 @@ footer {
     max-height: 70%;
 }
 
-
 #history {
     grid-area: hs;
 }
@@ -324,14 +341,6 @@ footer {
 }
 #contact {
     grid-area: cn;
-} 
-
-
-
-
-
-
-
-
+}
 
 /* Temporärt */
