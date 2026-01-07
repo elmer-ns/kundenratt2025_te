@@ -269,7 +269,7 @@ footer {
 }
 
 .product_tags {
-    opacity: 0.75;
+    opacity: 0.5;
 
     position: absolute;
     left: 10px;
@@ -283,6 +283,7 @@ footer {
 
     display: grid;
     grid-template-columns: 1fr;
+    box-shadow: 1px 1px 1px 1px;
 }
 .product_tags > * {
     scale: 0.85;
@@ -360,8 +361,11 @@ footer {
     grid-area: fu;
 }
 #find_us > iframe {
+    margin-top: 10px;
     border: 2px solid var(--green);
     border-radius: 5px;
+    width: 85%;
+    height: 100%;
 }
 
 #opening_hours {
@@ -373,7 +377,10 @@ footer {
     align-items: center;
 }
 #opening_hours > h2 {
-    margin-bottom: 10%;
+    margin-bottom: 5vh;
+}
+#opening_hours > p {
+    margin-bottom: 2.5vh;
 }
 
 /* Reveal card */
@@ -395,9 +402,8 @@ footer {
     transition: filter 0.125s;
 }
 .reveal_card:hover {
+    filter: brightness(105%);
     box-shadow: 1px 1px 1px 1px;
-
-    filter: contrast(110%);
 }
 
 .revealed {
