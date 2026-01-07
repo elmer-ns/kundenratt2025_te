@@ -216,12 +216,11 @@ footer {
     background-repeat: no-repeat;
     background-position: 50%;
 
-    filter: blur(2px) brightness(90%);
+    filter: brightness(25%);
 
-    transition: filter 0.25s ease-in-out;
+    transition: filter 0.125s ease-in-out;
 }
 .menu_item:hover > .product_image {
-    transition: filter 0.25s ease-in-out 0.35s;
     filter: none;
 }
 
@@ -345,9 +344,13 @@ footer {
     overflow: hidden;
 
     position: relative;
+
+    transition: filter 0.125s;
 }
 .reveal_card:hover {
     box-shadow: 3px 3px 3px 3px;
+
+    filter: contrast(110%);
 }
 
 .revealed {
