@@ -262,6 +262,8 @@ footer {
 }
 
 .product_image {
+    min-height: 0px;
+
     max-height: 100%;
     object-fit: contain;
 
