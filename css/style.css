@@ -277,18 +277,18 @@ footer {
 }
 
 .product_title {
-    font-size: 1.75vh;
+    font-size: 2vh;
 }
 
 .product_short {
     width: 65%;
     align-self: center;
-    font-size: 1.25vh;
+    font-size: 1.5vh;
 }
 
 .product_description {
     overflow: hidden;
-    font-size: 1vh;
+    font-size: 1.25vh;
 
     width: 65%;
     align-self: center;
@@ -458,7 +458,7 @@ footer {
     transition: height 0.25s ease-in-out;
 }
 .reveal_card:hover > .revealed {
-    height: 50%; /* Detta är det bästa sättet jag hittat, men det gör att texten alltid kommer ta samma mängd plats oberoende på hur mycket text det är. Jag hade kunnat använda max-height, men isåfall hade 'transition'-en inte fungerat lika bra. Det finns tydligen också funktioner där man kan använda auto och andra keywords i en transition men de verkar inte ha full support i alla browsers.*/
+    height: 100%; /* Detta är det bästa sättet jag hittat, men det gör att texten alltid kommer ta samma mängd plats oberoende på hur mycket text det är. Jag hade kunnat använda max-height, men isåfall hade 'transition'-en inte fungerat lika bra. Det finns tydligen också funktioner där man kan använda auto och andra keywords i en transition men de verkar inte ha full support i alla browsers.*/
     transition: height 0.25s ease-in-out;
 }
 
