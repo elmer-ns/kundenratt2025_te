@@ -4,7 +4,7 @@
     --main-color: #b58b63;
     --other-color: #f6efe8;
     --green: #a5b58d;
-    --text-color: rgb(50, 50, 50);
+    --text-color: rgb(30, 30, 30);
 }
 
 * {
@@ -125,8 +125,8 @@ b {
     filter: saturate(80%);
 }
 
-#links {
-    grid-area: lk;
+#big_picture {
+    grid-area: bp;
 }
 
 /* Header */
@@ -198,7 +198,7 @@ footer {
 #LandingPage {
     grid-template-areas:
         "hd hd"
-        "lk mn"
+        "bp mn"
         "pc pc"
         "ft ft";
 
