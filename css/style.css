@@ -50,7 +50,9 @@ footer > nav > ul {
 }
 address {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 a {
@@ -390,6 +392,13 @@ footer {
     grid-area: qk;
 }
 #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 15px;
+
     grid-area: cn;
 }
 
