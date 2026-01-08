@@ -6,7 +6,6 @@
     --green: #a5b58d;
     --text-color: rgb(30, 30, 30);
 }
-
 * {
     margin: 0px;
     padding: 0px;
@@ -17,37 +16,23 @@ img {
     height: 100%;
 }
 
-html {
-    font-size: 1.25vw;
+a {
+    color: unset;
+
+    text-decoration: none;
 }
 
 body {
-    background-color: var(--green);
-    color: var(--text-color);
-
     padding: 1vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
+
+    background-color: var(--green);
+    color: var(--text-color);
+
+    font-size: 1.25vw;
 }
 
-header,
-footer {
-    color: rgb(50, 50, 50);
-    text-shadow: 1px 1px 2px var(--green);
-
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
-}
-footer > nav > ul {
-    display: flex;
-    flex-direction: column;
-    text-decoration: underline;
-    gap: 2px;
-    font-size: 0.8rem;
-    list-style: none;
-}
 address {
     display: flex;
     flex-wrap: wrap;
@@ -55,42 +40,11 @@ address {
     gap: 10px;
 }
 
-a {
-    color: unset;
-
-    text-decoration: none;
-}
-
 .wrapper {
     display: grid;
 
     margin: 5px;
     gap: 1vw;
-}
-
-.logo {
-    display: block;
-    width: 8vh;
-    height: 8vh;
-}
-
-footer {
-    grid-area: ft;
-
-    height: 10vh;
-}
-
-main {
-    grid-area: mn;
-
-    padding: 10px;
-
-    background-color: var(--main-color);
-}
-section {
-    padding: 10px;
-
-    background-color: var(--main-color);
 }
 
 h1 {
@@ -109,34 +63,18 @@ b {
     display: block;
 }
 
-#pictures {
-    grid-area: pc;
-
-    display: grid;
-    gap: 10px;
-
-    grid-template-columns: 1fr 1fr;
-}
-#pictures > img {
-    object-fit: cover;
-    filter: brightness(75%) saturate(110%);
-}
-#pictures > img:nth-child(2) {
-    filter: saturate(80%);
-}
-
-#big_picture {
-    grid-area: bp;
-}
-
 /* Header */
 header {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-
     grid-area: hd;
 
-    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+
+    padding: 20px;
+
+    text-shadow: 1px 1px 2px var(--green);
 
     background-color: var(--other-color);
 }
@@ -145,6 +83,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    justify-self: end;
 
     background-color: inherit;
 }
@@ -170,7 +110,7 @@ a {
 }
 
 /* Denna biten är lite goofy, men det är så att loggan i mitten alltid är precis i mitten, vilket
-    jag inte lyckades fixa med flexbox*/
+    jag inte lyckades fixa med flexbox. --- nu några veckor senare har jag absolut ingen aning om vad detta ska innebära, för att loggan är absolut inte precis i mitten på något sätt. whatever*/
 #title {
     display: grid;
     grid-auto-flow: column;
@@ -189,9 +129,73 @@ a {
     text-align: start;
 }
 
+.logo {
+    display: block;
+    width: 8vh;
+    height: 8vh;
+}
+
 /* Footer */
+
 footer {
+    text-shadow: 1px 1px 2px var(--green);
+
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+footer > nav > ul {
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+    gap: 2px;
+    font-size: 0.8rem;
+    list-style: none;
+}
+
+footer {
+    grid-area: ft;
+
+    height: 10vh;
+
     background-color: var(--other-color);
+}
+
+/* Layout & Sections */
+
+main {
+    grid-area: mn;
+
+    padding: 10px;
+
+    background-color: var(--main-color);
+}
+section {
+    padding: 10px;
+
+    background-color: var(--main-color);
+}
+
+#pictures {
+    grid-area: pc;
+
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: 1fr 1fr;
+}
+#pictures > img {
+    object-fit: cover;
+    filter: brightness(75%) saturate(110%);
+}
+#pictures > img:nth-child(2) {
+    filter: saturate(80%);
+}
+
+#big_picture {
+    grid-area: bp;
 }
 
 /* Landing Page */
@@ -241,12 +245,8 @@ footer {
 
 #menu > section {
     gap: 10px;
-
     display: grid;
-
-    /*grid-template-columns: 1fr 1fr 1fr;*/
-    grid-template-columns: repeat(auto-fill, calc(35vh*0.95*1.25));
-    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: repeat(auto-fill, calc(35vh * 0.95 * 1.25));
     justify-content: center;
 }
 
