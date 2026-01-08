@@ -26,7 +26,7 @@
             <h3>
                 Vi erbjuder ett stort sortiment av bakverk, drycker och
                 lunchalternativ. Här kan du se vår meny och information om våra
-                produkter, samt beställa catering.
+                produkter, <span title="I ain't doing that without no JavaScript">samt beställa catering</span>.
             </h3>
             <hr />
             <ul>
@@ -253,14 +253,41 @@
                 nihil saepe.</p
             >
             <section id="lunchContainer">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="menu_item reveal_card">
+                    <div class="product_tags">
+                        <img src="img/vegan.svg" title="Vegansk" />
+                    </div>
+                    <p class="price">1kr</p>
+                    <img
+                        class="product_image"
+                        src="img/lunch/salad.png"
+                        alt="en tallrik sallad, gjort på tomater och olika blad"
+                    />
+                    <h2 class="product_title">Sallad</h2>
+                    <p class="product_short">En klassisk sallad</p>
+                    <p class="product_description revealed">
+                        Description Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Cupiditate, error amet? Maxime quia
+                        accusantium distinctio! Salalalalalallad
+                    </p>
+                </div>
+                <div class="menu_item reveal_card">
+                    <div class="product_tags">
+                        <img src="img/gluten-free.svg" title="Glutenfri" />
+                        <img src="img/vegan.svg" title="Vegansk" />
+                    </div>
+                    <p class="price">44kr</p>
+                    <img
+                        class="product_image"
+                        src="img/lunch/brutussalad.png"
+                        alt="en tallrik sallad, gjort på avokado, tomater, bönor, och blad. tillsammans med två skivor bröd"
+                    />
+                    <h2 class="product_title">Brutus-Sallad</h2>
+                    <p class="product_short">Et tu, brute?</p>
+                    <p class="product_description revealed">
+                        Vi på Café Solgilmt stöttar inga brutala diktatorer så som Julius Caesar. Därför har vi bytt ut vår ceasarsallad mot det vi kallar för "brutus-sallad". Länge leve republiken! 
+                    </p>
+                </div>
             </section>
             <h2 id="drycker">Drycker</h2>
             <p
@@ -269,14 +296,26 @@
                 porro cumque nihil saepe.</p
             >
             <section id="dryckerContainer">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="menu_item reveal_card">
+                    <div class="product_tags">
+                        <img src="img/gluten-free.svg" title="Glutenfri" />
+                        <img src="img/vegan.svg" title="Vegansk" />
+                    </div>
+                    <p class="price">1000kr</p>
+                    <img
+                        class="product_image"
+                        src="img/drycker/coffee.png"
+                        alt="en kopp kaffee"
+                    />
+                    <h2 class="product_title">Kaffe</h2>
+                    <p class="product_short">En kopp kaffe.</p>
+                    <p class="product_description revealed">
+                        Description Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Cupiditate, error amet? Maxime quia
+                        accusantium distinctio! Kaffe kaffe mums mums
+                    </p>
+                </div>
+                
             </section>
         </main>
 
