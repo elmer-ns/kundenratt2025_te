@@ -325,7 +325,6 @@ footer {
 
     display: grid;
     grid-template-columns: 1fr;
-    box-shadow: 1px 1px 1px 1px;
 }
 .product_tags > * {
     scale: 0.85;
